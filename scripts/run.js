@@ -79,8 +79,9 @@ yargs
     handler() {
       cd(PROJECT_ROOT)
       eachPackage(name => {
-        name = name.replace(/^promise\./, 'p')
-        exec(`npx codecov -F ${name}`)
+        cd(PROJECT_ROOT + '/' + name)
+        const flag = name.replace(/^promise\./, 'p')
+        exec(`npx codecov -F ${flag}`)
       })
     },
   })
