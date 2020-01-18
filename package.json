@@ -7,7 +7,7 @@
     "install-deps": "./scripts/run.js install-deps",
     "test": "./scripts/run.js test",
     "test-cover": "./scripts/run.js test-cover",
-    "report-cover": "./scripts/run.js report-cover"
+    "test-cover-report": "./scripts/run.js test-cover-report"
   },
   "keywords": [],
   "author": "",

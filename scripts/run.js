@@ -74,14 +74,17 @@ yargs
     },
   })
   .command({
-    command: 'report-cover',
-    description: 'report-cover',
+    command: 'test-cover-report',
+    description: 'test-cover-report',
     handler() {
-      cd(PROJECT_ROOT)
       eachPackage(name => {
+        // test-cover
         cd(PROJECT_ROOT + '/' + name)
+        exec('npx nyc --reporter=lcov --reporter=text mocha')
+
+        // report
         const flag = name.replace(/^promise\./, 'p')
-        exec(`npx codecov -F ${flag}`)
+        exec(`npx codecov -C -F ${flag}`)
       })
     },
   })
