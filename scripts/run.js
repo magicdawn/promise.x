@@ -16,6 +16,10 @@ const exec = cmd => {
 
 set('-e')
 set('-v')
+process.on('unhandledRejection', e => {
+  console.error(e)
+  process.exit(1)
+})
 
 const PROJECT_ROOT = path.join(__dirname, '..')
 const packages = glob
@@ -24,10 +28,10 @@ const packages = glob
   })
   .map(name => _.trim(name, '/'))
 
-const eachPackage = async fn => {
+const eachPackage = fn => {
   cd(PROJECT_ROOT)
   for (let name of packages) {
-    await Promise.resolve(fn(name))
+    fn(name)
   }
 }
 
