@@ -71,10 +71,16 @@ yargs
     command: 'gen-readme',
     description: 'gen-readme',
     handler() {
+      const desc = packages.reduce((prev, name) => {
+        const pkg = require(PROJECT_ROOT + '/' + name + '/package.json')
+        prev[name] = pkg.description
+        return prev
+      }, {})
+
       const file = PROJECT_ROOT + '/' + 'README.md'
       const tpl = PROJECT_ROOT + '/' + 'README.md.njk'
       const tplContent = fs.readFileSync(tpl, 'utf8')
-      const content = njk.renderString(tplContent, {packages})
+      const content = njk.renderString(tplContent, {packages, desc})
       fs.writeFileSync(file, content, 'utf8')
       console.log('[done]: %s generated !', file)
     },
