@@ -87,7 +87,7 @@ yargs
         // report
         cd(PROJECT_ROOT)
         const flag = name.replace(/^promise\./, 'p')
-        exec(`npx codecov -C -F ${flag}`)
+        exec(`npx codecov -C -F ${flag} -y ${codecovConfigPath}`)
       })
     },
   })
