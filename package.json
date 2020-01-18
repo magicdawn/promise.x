@@ -4,6 +4,7 @@
   "private": true,
   "main": "index.js",
   "scripts": {
+    "install-deps": "./scripts/run.js install-deps",
     "test": "./scripts/run.js test",
     "test-cover": "./scripts/run.js test-cover",
     "report-cover": "./scripts/run.js report-cover"

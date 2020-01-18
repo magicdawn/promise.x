@@ -4,7 +4,7 @@ language: node_js
 node_js:
   - lts/*
   - node
-script: 'npm run test-cover'
+script: CI=travis npm run install-deps && npm run test-cover
 after_script: 'npm run report-cover'
 notifications:
   email: false

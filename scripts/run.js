@@ -39,6 +39,18 @@ const eachPackage = async fn => {
 
 yargs
   .command({
+    command: 'install-deps',
+    desc: 'install-deps',
+    handler() {
+      eachPackage(name => {
+        cd(PROJECT_ROOT + '/' + name)
+        const isCI = Boolean(process.env.CI)
+        const client = isCI ? 'npm' : 'cnpm'
+        exec(`${client} i`)
+      })
+    },
+  })
+  .command({
     command: 'test',
     handler() {
       eachPackage(name => {
