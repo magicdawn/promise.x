@@ -1,0 +1,42 @@
+{
+  "name": "promise.x",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "./scripts/run.js test",
+    "test-cover": "./scripts/run.js test-cover",
+    "report-cover": "./scripts/run.js report-cover"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@magicdawn/eslint-config": "^0.0.2",
+    "@magicdawn/prettier-config": "^0.0.1",
+    "codecov": "^3.3.0",
+    "eslint": "^6.8.0",
+    "fs-extra": "^8.1.0",
+    "glob": "^7.1.6",
+    "husky": "latest",
+    "lint-staged": "latest",
+    "mocha": "^6.1.4",
+    "nyc": "^14.0.0",
+    "prettier": "latest",
+    "shelljs": "^0.8.3",
+    "should": "^13.2.3",
+    "tsd": "^0.11.0",
+    "yargs": "^15.1.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,less,vue}": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+}

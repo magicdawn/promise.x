@@ -1,0 +1,30 @@
+{
+  "name": "promise.map",
+  "version": "0.0.2",
+  "description": "Promise.map",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "LICENSE",
+    "package.json",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/magicdawn/promise.map.git"
+  },
+  "keywords": [
+    "promise",
+    "map",
+    "parallel"
+  ],
+  "author": "magicdawn",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/magicdawn/promise.map/issues"
+  },
+  "homepage": "https://github.com/magicdawn/promise.map#readme",
+  "devDependencies": {
+    "chance": "^1.0.1"
+  }
+}

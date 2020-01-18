@@ -1,0 +1,30 @@
+{
+  "name": "promise.ify",
+  "version": "0.3.0",
+  "description": "promiseify / promisify / promise-ify / pify",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/magicdawn/promise.ify.git"
+  },
+  "keywords": [
+    "promise",
+    "promiseify",
+    "promisify",
+    "promise-ify",
+    "pify",
+    "promise.ify"
+  ],
+  "author": "magicdawn",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/magicdawn/promise.ify/issues"
+  },
+  "homepage": "https://github.com/magicdawn/promise.ify#readme",
+  "files": [
+    "index.js",
+    "LICENSE",
+    "package.json",
+    "README.md"
+  ]
+}

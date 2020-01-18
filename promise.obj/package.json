@@ -1,0 +1,30 @@
+{
+  "name": "promise.obj",
+  "version": "0.1.0",
+  "description": "promise.obj / promise.props etc",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/magicdawn/promise.obj.git"
+  },
+  "keywords": [
+    "promise",
+    "promise.props",
+    "promise.obj",
+    "props",
+    "obj",
+    "all"
+  ],
+  "author": "magicdawn",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/magicdawn/promise.obj/issues"
+  },
+  "files": [
+    "index.js",
+    "package.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "homepage": "https://github.com/magicdawn/promise.obj#readme"
+}

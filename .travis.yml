@@ -1,0 +1,10 @@
+language: node_js
+# https://docs.travis-ci.com/user/languages/javascript-with-nodejs/#specifying-nodejs-versions
+# latest lts & latest
+node_js:
+  - lts/*
+  - node
+script: 'npm run test-cover'
+after_script: 'npm run report-cover'
+notifications:
+  email: false

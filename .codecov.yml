@@ -1,0 +1,29 @@
+coverage:
+  status:
+    promise.ify:
+      flags: promise.ify
+    promise.map:
+      flags: promise.map
+    promise.obj:
+      flags: promise.obj
+    promise.retry:
+      flags: promise.retry
+    promise.timeout:
+      flags: promise.timeout
+
+flags:
+  promise.ify:
+    paths:
+      - promise.ify/
+  promise.map:
+    paths:
+      - promise.map/
+  promise.obj:
+    paths:
+      - promise.obj/
+  promise.retry:
+    paths:
+      - promise.retry/
+  promise.timeout:
+    paths:
+      - promise.timeout/
