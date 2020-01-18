@@ -77,12 +77,15 @@ yargs
     command: 'test-cover-report',
     description: 'test-cover-report',
     handler() {
+      const codecovConfigPath = path.join(PROJECT_ROOT, '.codecov.yml')
+
       eachPackage(name => {
         // test-cover
         cd(PROJECT_ROOT + '/' + name)
         exec('npx nyc --reporter=lcov --reporter=text mocha')
 
         // report
+        cd(PROJECT_ROOT)
         const flag = name.replace(/^promise\./, 'p')
         exec(`npx codecov -C -F ${flag}`)
       })
