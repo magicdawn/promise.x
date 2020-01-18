@@ -1,7 +1,7 @@
 {
   "name": "promise.x",
   "version": "1.0.0",
-  "description": "",
+  "private": true,
   "main": "index.js",
   "scripts": {
     "test": "./scripts/run.js test",
@@ -21,6 +21,7 @@
     "husky": "latest",
     "lint-staged": "latest",
     "mocha": "^6.1.4",
+    "nunjucks": "^3.2.0",
     "nyc": "^14.0.0",
     "prettier": "latest",
     "shelljs": "^0.8.3",

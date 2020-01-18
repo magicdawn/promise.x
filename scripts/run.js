@@ -7,6 +7,7 @@ const glob = require('glob')
 const yargs = require('yargs')
 const _ = require('lodash')
 const {execSync} = require('child_process')
+const njk = require('nunjucks')
 
 const exec = cmd => {
   console.log('[exec]: %s', cmd)
@@ -17,9 +18,11 @@ set('-e')
 set('-v')
 
 const PROJECT_ROOT = path.join(__dirname, '..')
-const packages = glob.sync('promise.*/', {
-  cwd: PROJECT_ROOT,
-})
+const packages = glob
+  .sync('promise.*/', {
+    cwd: PROJECT_ROOT,
+  })
+  .map(name => _.trim(name, '/'))
 
 const eachPackage = async fn => {
   cd(PROJECT_ROOT)
@@ -46,6 +49,7 @@ yargs
   })
   .command({
     command: 'test-cover',
+    description: 'test-cover',
     handler() {
       eachPackage(name => {
         cd(PROJECT_ROOT + '/' + name)
@@ -55,11 +59,25 @@ yargs
   })
   .command({
     command: 'report-cover',
+    description: 'report-cover',
     handler() {
       cd(PROJECT_ROOT)
       eachPackage(name => {
-        name = _.trim(name, '/')
         exec(`npx codecov -F ${name}`)
       })
     },
-  }).argv
+  })
+  .command({
+    command: 'gen-readme',
+    description: 'gen-readme',
+    handler() {
+      const file = PROJECT_ROOT + '/' + 'README.md'
+      const tpl = PROJECT_ROOT + '/' + 'README.md.njk'
+      const tplContent = fs.readFileSync(tpl, 'utf8')
+      const content = njk.renderString(tplContent, {packages})
+      fs.writeFileSync(file, content, 'utf8')
+      console.log('[done]: %s generated !', file)
+    },
+  })
+  .demandCommand()
+  .help().argv

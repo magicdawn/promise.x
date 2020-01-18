@@ -1,0 +1,12 @@
+# promise.x
+>  promise utils
+
+[![Build Status](https://img.shields.io/travis/magicdawn/promise.x.svg?style=flat-square)](https://travis-ci.org/magicdawn/promise.x)
+
+## packages
+<!-- prettier-ignore -->
+| package | Coverage | npm version | npm downloads | npm license |
+| -- | -- | -- | -- | -- |
+{% for name in packages -%}
+| [{{ name }} ]({{name}}/) | [![Coverage Status](https://img.shields.io/codecov/c/github/magicdawn/{{ name }}.svg?style=flat-square)](https://codecov.io/gh/magicdawn/{{ name }}) | [![npm version](https://img.shields.io/npm/v/{{ name }}.svg?style=flat-square)](https://www.npmjs.com/package/{{ name }}) | [![npm downloads](https://img.shields.io/npm/dm/{{ name }}.svg?style=flat-square)](https://www.npmjs.com/package/{{ name }}) | [![npm license](https://img.shields.io/npm/l/{{ name }}.svg?style=flat-square)](http://magicdawn.mit-license.org) |
+{% endfor %}
