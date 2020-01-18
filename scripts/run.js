@@ -77,12 +77,35 @@ yargs
         return prev
       }, {})
 
-      const file = PROJECT_ROOT + '/' + 'README.md'
-      const tpl = PROJECT_ROOT + '/' + 'README.md.njk'
-      const tplContent = fs.readFileSync(tpl, 'utf8')
-      const content = njk.renderString(tplContent, {packages, desc})
-      fs.writeFileSync(file, content, 'utf8')
-      console.log('[done]: %s generated !', file)
+      // promise.x readme
+      {
+        const file = PROJECT_ROOT + '/' + 'README.md'
+        const tpl = __dirname + '/' + 'README.md.njk'
+        const tplContent = fs.readFileSync(tpl, 'utf8')
+        const content = njk.renderString(tplContent, {packages, desc})
+        fs.writeFileSync(file, content, 'utf8')
+        console.log('[gen-readme]: %s generated !', file)
+      }
+
+      // per pkg
+      {
+        for (let name of packages) {
+          const file = path.join(PROJECT_ROOT, name, 'README.md')
+          const tpl = __dirname + '/' + 'pkg.README.md.njk'
+          const tplContent = fs.readFileSync(tpl, 'utf8')
+
+          let API = ''
+          const API_MD_PATH = path.join(PROJECT_ROOT, name, 'API.md')
+          if (fs.existsSync(API_MD_PATH)) {
+            API = fs.readFileSync(API_MD_PATH, 'utf8')
+          }
+
+          const content = njk.renderString(tplContent, {name, desc: desc[name], API})
+          fs.writeFileSync(file, content, 'utf8')
+          console.log('[gen-readme]: %s generated !', file)
+          exec(`npx prettier --write ${file}`)
+        }
+      }
     },
   })
   .demandCommand()
