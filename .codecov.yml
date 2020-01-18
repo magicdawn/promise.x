@@ -1,29 +1,29 @@
 coverage:
   status:
     promise.ify:
-      flags: promise.ify
+      flags: pify
     promise.map:
-      flags: promise.map
+      flags: pmap
     promise.obj:
-      flags: promise.obj
+      flags: pobj
     promise.retry:
-      flags: promise.retry
+      flags: pretry
     promise.timeout:
-      flags: promise.timeout
+      flags: ptimeout
 
 flags:
-  promise.ify:
+  pify:
     paths:
       - promise.ify/
-  promise.map:
+  pmap:
     paths:
       - promise.map/
-  promise.obj:
+  pobj:
     paths:
       - promise.obj/
-  promise.retry:
+  pretry:
     paths:
       - promise.retry/
-  promise.timeout:
+  ptimeout:
     paths:
       - promise.timeout/
