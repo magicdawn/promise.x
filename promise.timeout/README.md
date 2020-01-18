@@ -16,11 +16,9 @@ this is target ES6 environment.
 
 ## Install
 
-```
+```sh
 $ npm i promise.timeout --save
 ```
-
-## API
 
 ## Note
 

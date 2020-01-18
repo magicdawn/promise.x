@@ -16,11 +16,9 @@ this is target ES6 environment.
 
 ## Install
 
-```
+```sh
 $ npm i promise.obj --save
 ```
-
-## API
 
 ## Note
 
