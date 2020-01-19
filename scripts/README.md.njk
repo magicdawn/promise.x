@@ -9,5 +9,7 @@
 | package | description | Coverage | npm version | npm downloads | npm license |
 | -- | -- | -- | -- | -- | -- |
 {% for name in packages -%}
-| [{{ name }} ]({{name}}/) | {{ desc[name] }} | [![Coverage Status](https://codecov.io/gh/magicdawn/promise.x/branch/master/graph/badge.svg?flag={{ flag[name] }}&style=flat-square)](https://codecov.io/gh/magicdawn/{{ name }}) | [![npm version](https://img.shields.io/npm/v/{{ name }}.svg?style=flat-square)](https://www.npmjs.com/package/{{ name }}) | [![npm downloads](https://img.shields.io/npm/dm/{{ name }}.svg?style=flat-square)](https://www.npmjs.com/package/{{ name }}) | [![npm license](https://img.shields.io/npm/l/{{ name }}.svg?style=flat-square)](http://magicdawn.mit-license.org) |
+| [{{ name }} ]({{name}}/) | {{ desc[name] }} | [![codecov](https://codecov.io/gh/magicdawn/promise.x/branch/master/graph/badge.svg?flag={{ flag[name] }})](https://codecov.io/gh/magicdawn/promise.x) | [![npm version](https://img.shields.io/npm/v/{{ name }}.svg?style=flat-square)](https://www.npmjs.com/package/{{ name }}) | [![npm downloads](https://img.shields.io/npm/dm/{{ name }}.svg?style=flat-square)](https://www.npmjs.com/package/{{ name }}) | [![npm license](https://img.shields.io/npm/l/{{ name }}.svg?style=flat-square)](http://magicdawn.mit-license.org) |
 {% endfor %}
+
+

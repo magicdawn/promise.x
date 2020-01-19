@@ -5,7 +5,7 @@
 > promiseify / promisify / promise-ify / pify
 
 [![Build Status](https://img.shields.io/travis/magicdawn/promise.x.svg?style=flat-square)](https://travis-ci.org/magicdawn/promise.x)
-[![Coverage Status](https://img.shields.io/codecov/c/github/magicdawn/promise.ify.svg?style=flat-square)](https://codecov.io/gh/magicdawn/promise.ify)
+[![codecov](https://codecov.io/gh/magicdawn/promise.x/branch/master/graph/badge.svg?flag=pify)](https://codecov.io/gh/magicdawn/promise.x)
 [![npm version](https://img.shields.io/npm/v/promise.ify.svg?style=flat-square)](https://www.npmjs.com/package/promise.ify)
 [![npm downloads](https://img.shields.io/npm/dm/promise.ify.svg?style=flat-square)](https://www.npmjs.com/package/promise.ify)
 [![npm license](https://img.shields.io/npm/l/promise.ify.svg?style=flat-square)](http://magicdawn.mit-license.org)

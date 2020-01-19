@@ -5,7 +5,7 @@
 > Promise.map
 
 [![Build Status](https://img.shields.io/travis/magicdawn/promise.x.svg?style=flat-square)](https://travis-ci.org/magicdawn/promise.x)
-[![Coverage Status](https://img.shields.io/codecov/c/github/magicdawn/promise.map.svg?style=flat-square)](https://codecov.io/gh/magicdawn/promise.map)
+[![codecov](https://codecov.io/gh/magicdawn/promise.x/branch/master/graph/badge.svg?flag=pmap)](https://codecov.io/gh/magicdawn/promise.x)
 [![npm version](https://img.shields.io/npm/v/promise.map.svg?style=flat-square)](https://www.npmjs.com/package/promise.map)
 [![npm downloads](https://img.shields.io/npm/dm/promise.map.svg?style=flat-square)](https://www.npmjs.com/package/promise.map)
 [![npm license](https://img.shields.io/npm/l/promise.map.svg?style=flat-square)](http://magicdawn.mit-license.org)

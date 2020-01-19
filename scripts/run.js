@@ -130,7 +130,12 @@ yargs
             API = fs.readFileSync(API_MD_PATH, 'utf8')
           }
 
-          const content = njk.renderString(tplContent, {name, desc: desc[name], API})
+          const content = njk.renderString(tplContent, {
+            name,
+            API,
+            desc: desc[name],
+            flag: flag[name],
+          })
           fs.writeFileSync(file, content, 'utf8')
           console.log('[gen-readme]: %s generated !', file)
           exec(`npx prettier --write ${file}`)
