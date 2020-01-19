@@ -101,12 +101,18 @@ yargs
         return prev
       }, {})
 
+      const flag = packages.reduce((prev, name) => {
+        const flag = name.replace(/^promise\./, 'p')
+        prev[name] = flag
+        return prev
+      }, {})
+
       // promise.x readme
       {
         const file = PROJECT_ROOT + '/' + 'README.md'
         const tpl = __dirname + '/' + 'README.md.njk'
         const tplContent = fs.readFileSync(tpl, 'utf8')
-        const content = njk.renderString(tplContent, {packages, desc})
+        const content = njk.renderString(tplContent, {packages, desc, flag})
         fs.writeFileSync(file, content, 'utf8')
         console.log('[gen-readme]: %s generated !', file)
       }
