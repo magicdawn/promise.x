@@ -27,7 +27,7 @@ this package require async/await environment.
 ## API
 
 ```js
-const pretry = require(&#39;promise.retry&#39;)
+const pretry = require('promise.retry')
 const TimeoutError = pretry.TimeoutError
 const RetryError = pretry.RetryError
 ```

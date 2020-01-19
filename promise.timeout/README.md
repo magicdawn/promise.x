@@ -27,7 +27,7 @@ this is target ES6 environment.
 ## API
 
 ```js
-const ptimeout = require(&#39;promise.timeout&#39;)
+const ptimeout = require('promise.timeout')
 ```
 
 `ptimeout(fn, timeout, cancel)`
@@ -37,7 +37,7 @@ const ptimeout = require(&#39;promise.timeout&#39;)
 - `cancel` Boolean, whether support onCancel
 
 ```js
-var ptimeout = require(&#39;promise.timeout&#39;)
+var ptimeout = require('promise.timeout')
 
 // a function will cost 20ms
 function test() {
@@ -73,7 +73,7 @@ _50.should.equal(20)
 2. use `onCancel` para to register clean callback
 
 ```js
-var ptimeout = require(&#39;promise.timeout&#39;)
+var ptimeout = require('promise.timeout')
 
 // a function will cost 20ms
 function test(onCancel) {
@@ -83,8 +83,8 @@ function test(onCancel) {
     }, 20)
 
     // custom clean
-    onCancel &amp;&amp;
-      onCancel(() =&gt; {
+    onCancel &&
+      onCancel(() => {
         clearTimeout(timer)
       })
   })

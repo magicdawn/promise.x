@@ -31,10 +31,10 @@ $ npm i promise.ify --save
   - o: the input object
 
 ```js
-var promiseify = require(&#39;promise.ify&#39;)
+var promiseify = require('promise.ify')
 var readFile = promiseify(fs.readFile, fs)
 
-var Connection = require(&#39;mysql/lib/Connection&#39;)
+var Connection = require('mysql/lib/Connection')
 promiseify.all(Connection.prototype)
 ```
 
