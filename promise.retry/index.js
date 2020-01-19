@@ -65,9 +65,7 @@ function RetryError(options) {
   this.errors = options.errors
 
   // message
-  this.message = `tried function ${this.fn.name || '<anonymous>'} ${
-    this.times
-  } times`
+  this.message = `tried function ${this.fn.name || '<anonymous>'} ${this.times} times`
   if (this.timeout) {
     this.message += ` with timeout = ${this.timeout}ms`
   }

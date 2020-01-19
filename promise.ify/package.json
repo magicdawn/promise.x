@@ -3,6 +3,12 @@
   "version": "0.3.0",
   "description": "promiseify / promisify / promise-ify / pify",
   "main": "index.js",
+  "files": [
+    "index.js",
+    "LICENSE",
+    "package.json",
+    "README.md"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/magicdawn/promise.ify.git"
@@ -20,11 +26,5 @@
   "bugs": {
     "url": "https://github.com/magicdawn/promise.ify/issues"
   },
-  "homepage": "https://github.com/magicdawn/promise.ify#readme",
-  "files": [
-    "index.js",
-    "LICENSE",
-    "package.json",
-    "README.md"
-  ]
+  "homepage": "https://github.com/magicdawn/promise.ify#readme"
 }
