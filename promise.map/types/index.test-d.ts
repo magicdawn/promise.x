@@ -1,14 +1,16 @@
 import {expectType} from 'tsd'
 import pmap from './'
 
-function normal({a: number, b: string}): number {
+type Item = {a: number; b: string}
+
+function normal(i: Item): number {
   return 1
 }
-function asyncFn({a: number, b: string}): Promise<number> {
+function asyncFn(i: Item): Promise<number> {
   return Promise.resolve(1)
 }
 
-const arr = [
+const arr: Item[] = [
   {a: 1, b: 'input1'},
   {a: 2, b: 'input2'},
 ]

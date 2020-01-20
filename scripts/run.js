@@ -35,11 +35,16 @@ const eachPackage = fn => {
   }
 }
 
-// "scripts": {
-//   "test": "mocha",
-//   "test-cover": "nyc --reporter=lcov --reporter=text mocha",
-//   "report-cover": "codecov"
-// },
+const $ = {
+  cd: name => cd(PROJECT_ROOT + '/' + name),
+  test: () => exec('npx mocha'),
+  testCover: () => exec('npx nyc --reporter=lcov --reporter=text mocha'),
+  tsd: name => {
+    const pkg = require(path.join(PROJECT_ROOT, name, 'package.json'))
+    if (!pkg.types) return
+    exec('npx tsd')
+  },
+}
 
 yargs
   .command({
@@ -47,7 +52,7 @@ yargs
     desc: 'install-deps',
     handler() {
       eachPackage(name => {
-        cd(PROJECT_ROOT + '/' + name)
+        $.cd(name)
         const isCI = Boolean(process.env.CI)
         const client = isCI ? 'npm' : 'cnpm'
         exec(`${client} i`)
@@ -58,8 +63,9 @@ yargs
     command: 'test',
     handler() {
       eachPackage(name => {
-        cd(PROJECT_ROOT + '/' + name)
-        exec('npx mocha')
+        $.cd(name)
+        $.test()
+        $.tsd(name)
       })
     },
   })
@@ -68,8 +74,9 @@ yargs
     description: 'test-cover',
     handler() {
       eachPackage(name => {
-        cd(PROJECT_ROOT + '/' + name)
-        exec('npx nyc --reporter=lcov --reporter=text mocha')
+        $.cd(name)
+        $.testCover()
+        $.tsd(name)
       })
     },
   })
@@ -81,8 +88,9 @@ yargs
 
       eachPackage(name => {
         // test-cover
-        cd(PROJECT_ROOT + '/' + name)
-        exec('npx nyc --reporter=lcov --reporter=text mocha')
+        $.cd(name)
+        $.testCover()
+        $.tsd()
 
         // report
         cd(PROJECT_ROOT)
