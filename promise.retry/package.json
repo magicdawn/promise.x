@@ -3,9 +3,16 @@
   "version": "0.2.0",
   "description": "add (timeout and fail) retry for async functions",
   "main": "index.js",
+  "types": "types/index.d.ts",
+  "files": [
+    "index.js",
+    "types/index.d.ts",
+    "README.md",
+    "package.json"
+  ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/magicdawn/promise.retry.git"
+    "url": "git+https://github.com/magicdawn/promise.x.git"
   },
   "keywords": [
     "promise",
@@ -15,18 +22,10 @@
   "author": "magicdawn",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/magicdawn/promise.retry/issues"
+    "url": "https://github.com/magicdawn/promise.x/issues"
   },
-  "homepage": "https://github.com/magicdawn/promise.retry#readme",
+  "homepage": "https://github.com/magicdawn/promise.x/blob/master/promise.retry",
   "dependencies": {
-    "promise.timeout": "^0.2.0"
-  },
-  "files": [
-    "index.js",
-    "README.md",
-    "package.json"
-  ],
-  "engines": {
-    "node": ">=7.6.0"
+    "promise.timeout": "^0.3.0"
   }
 }

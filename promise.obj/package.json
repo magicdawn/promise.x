@@ -3,9 +3,17 @@
   "version": "0.1.0",
   "description": "promise.obj / promise.props etc",
   "main": "index.js",
+  "types": "types/index.d.ts",
+  "files": [
+    "index.js",
+    "types/index.d.ts",
+    "package.json",
+    "README.md",
+    "LICENSE"
+  ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/magicdawn/promise.obj.git"
+    "url": "git+https://github.com/magicdawn/promise.x.git"
   },
   "keywords": [
     "promise",
@@ -18,13 +26,7 @@
   "author": "magicdawn",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/magicdawn/promise.obj/issues"
+    "url": "https://github.com/magicdawn/promise.x/issues"
   },
-  "files": [
-    "index.js",
-    "package.json",
-    "README.md",
-    "LICENSE"
-  ],
-  "homepage": "https://github.com/magicdawn/promise.obj#readme"
+  "homepage": "https://github.com/magicdawn/promise.x/blob/master/promise.obj"
 }

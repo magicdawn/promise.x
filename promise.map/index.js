@@ -29,7 +29,7 @@ module.exports = function map(arr, fn, concurrency) {
         started++
         ;(function(index) {
           var cur = arr[index]
-          fn.call(cur, cur, index, arr)
+          Promise.resolve(fn.call(cur, cur, index, arr))
             .then(function(result) {
               running--
               completed++

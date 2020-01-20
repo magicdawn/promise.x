@@ -3,15 +3,17 @@
   "version": "0.0.2",
   "description": "Promise.map",
   "main": "index.js",
+  "types": "types/index.d.ts",
   "files": [
     "index.js",
+    "types/index.d.ts",
     "LICENSE",
     "package.json",
     "README.md"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/magicdawn/promise.map.git"
+    "url": "git+https://github.com/magicdawn/promise.x.git"
   },
   "keywords": [
     "promise",
@@ -21,9 +23,9 @@
   "author": "magicdawn",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/magicdawn/promise.map/issues"
+    "url": "https://github.com/magicdawn/promise.x/issues"
   },
-  "homepage": "https://github.com/magicdawn/promise.map#readme",
+  "homepage": "https://github.com/magicdawn/promise.x/blob/master/promise.map",
   "devDependencies": {
     "chance": "^1.0.1"
   }

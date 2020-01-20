@@ -10,7 +10,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/magicdawn/promise.timeout.git"
+    "url": "git+https://github.com/magicdawn/promise.x.git"
   },
   "keywords": [
     "promise",
@@ -20,7 +20,7 @@
   "author": "magicdawn",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/magicdawn/promise.timeout/issues"
+    "url": "https://github.com/magicdawn/promise.x/issues"
   },
-  "homepage": "https://github.com/magicdawn/promise.timeout#readme"
+  "homepage": "https://github.com/magicdawn/promise.x/blob/master/promise.timeout"
 }
