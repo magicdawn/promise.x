@@ -42,13 +42,13 @@ var p = map(arr, function(item, index, arr){
 
 ## See Also
 
-- [promise.timeout](https://github.com/magicdawn/promise.x/promise.timeout)
-- [promise.retry](https://github.com/magicdawn/promise.x/promise.retry)
-- [promise.map](https://github.com/magicdawn/promise.x/promise.map)
-- [promise.ify](https://github.com/magicdawn/promise.x/promise.ify)
-- [promise.cb](https://github.com/magicdawn/promise.x/promise.cb)
-- [promise.obj](https://github.com/magicdawn/promise.x/promise.obj)
-- [promise.sleep](https://github.com/magicdawn/promise.x/promise.sleep)
+- [promise.timeout](https://github.com/magicdawn/promise.x/blob/master/promise.timeout)
+- [promise.retry](https://github.com/magicdawn/promise.x/blob/master/promise.retry)
+- [promise.map](https://github.com/magicdawn/promise.x/blob/master/promise.map)
+- [promise.ify](https://github.com/magicdawn/promise.x/blob/master/promise.ify)
+- [promise.cb](https://github.com/magicdawn/promise.x/blob/master/promise.cb)
+- [promise.obj](https://github.com/magicdawn/promise.x/blob/master/promise.obj)
+- [promise.sleep](https://github.com/magicdawn/promise.x/blob/master/promise.sleep)
 
 ## License
 

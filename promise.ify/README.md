@@ -22,30 +22,34 @@ $ npm i promise.ify --save
 
 ## API
 
-### promiseify
+```js
+const pify = require('promise.ify')
+```
 
-- promiseify(m, ctx)
-  - m: the input
-  - ctx: the context
-- promiseify.all(o)
+### pify
+
+- pify(m, ctx)
+  - m: the input method
+  - ctx: the context, the `this` value for `m`
+- pify.all(o)
   - o: the input object
 
 ```js
-var promiseify = require('promise.ify')
-var readFile = promiseify(fs.readFile, fs)
+var pify = require('promise.ify')
+var readFile = pify(fs.readFile, fs)
 
 var Connection = require('mysql/lib/Connection')
-promiseify.all(Connection.prototype)
+pify.all(Connection.prototype)
 ```
 
-### promiseify.noerr
+### pify.noerr
 
-take care of the `callback(result)` case
+take care of the `callback(result)` case, with no error parameter in the callback
 
-- promiseify.noerr(m, ctx)
+- pify.noerr(m, ctx)
   - m: the input method
-  - ctx: the context
-- promiseify.noerr.all(o)
+  - ctx: the context, the `this` value for `m`
+- pify.noerr.all(o)
   - o: the input object
 
 ## Why
@@ -58,13 +62,13 @@ for split things out of bluebird
 
 ## See Also
 
-- [promise.timeout](https://github.com/magicdawn/promise.x/promise.timeout)
-- [promise.retry](https://github.com/magicdawn/promise.x/promise.retry)
-- [promise.map](https://github.com/magicdawn/promise.x/promise.map)
-- [promise.ify](https://github.com/magicdawn/promise.x/promise.ify)
-- [promise.cb](https://github.com/magicdawn/promise.x/promise.cb)
-- [promise.obj](https://github.com/magicdawn/promise.x/promise.obj)
-- [promise.sleep](https://github.com/magicdawn/promise.x/promise.sleep)
+- [promise.timeout](https://github.com/magicdawn/promise.x/blob/master/promise.timeout)
+- [promise.retry](https://github.com/magicdawn/promise.x/blob/master/promise.retry)
+- [promise.map](https://github.com/magicdawn/promise.x/blob/master/promise.map)
+- [promise.ify](https://github.com/magicdawn/promise.x/blob/master/promise.ify)
+- [promise.cb](https://github.com/magicdawn/promise.x/blob/master/promise.cb)
+- [promise.obj](https://github.com/magicdawn/promise.x/blob/master/promise.obj)
+- [promise.sleep](https://github.com/magicdawn/promise.x/blob/master/promise.sleep)
 
 ## License
 
